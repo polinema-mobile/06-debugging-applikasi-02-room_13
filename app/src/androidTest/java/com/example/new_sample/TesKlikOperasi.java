@@ -68,5 +68,38 @@ public class TesKlikOperasi {
         onView(withId(R.id.button_divide)).perform(click());
         onView(withId(R.id.output)).check(matches(withText("3")));
     }
+
+    @Test
+    public void tesKlikHapus(){
+
+        onView(withId(R.id.button8)).perform(click());
+        onView(withId(R.id.button_clear)).perform(click());
+        onView(withId(R.id.button7)).perform(click());
+        onView(withId(R.id.button_add)).perform(click());
+        onView(withId(R.id.button3)).perform(click());
+        onView(withId(R.id.button_equal)).perform(click());
+        onView(withId(R.id.output)).check(matches(withText("10")));
+    }
+
+    @Test
+    public void tesKlikNegatif(){
+        onView(withId(R.id.button4)).perform(click());
+        onView(withId(R.id.button_add)).perform(click());
+        onView(withId(R.id.button3)).perform(click());
+        onView(withId(R.id.button_equal)).perform(click());
+        onView(withId(R.id.output)).check(matches(withText("12")));
+    }
+
+    @Test
+    public void tesKlikKoma(){
+
+        onView(withId(R.id.button5)).perform(click());
+        onView(withId(R.id.button_dot)).perform(click());
+        onView(withId(R.id.button4)).perform(click());
+        onView(withId(R.id.button_add)).perform(click());
+        onView(withId(R.id.button3)).perform(click());
+        onView(withId(R.id.button_equal)).perform(click());
+        onView(withId(R.id.output)).check(matches(withText("10")));
+    }
 }
 
