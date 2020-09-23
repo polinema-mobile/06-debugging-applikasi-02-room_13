@@ -62,11 +62,24 @@ public class TesKlikOperasi {
     }
 
     @Test
-    public void tesKlikPersen(){
+    public void tesKlikPara1(){
 
         onView(withId(R.id.button9)).perform(click());
-        onView(withId(R.id.button_divide)).perform(click());
-        onView(withId(R.id.output)).check(matches(withText("3")));
+        onView(withId(R.id.button_para1)).perform(click());
+        onView(withId(R.id.button2)).perform(click());
+        onView(withId(R.id.output)).check(matches(withText("1")));
+
+    }
+
+    @Test
+    public void tesKlikPara2(){
+
+        onView(withId(R.id.button4)).perform(click());
+        onView(withId(R.id.button_para2)).perform(click());
+        onView(withId(R.id.button3)).perform(click());
+        onView(withId(R.id.button_add)).perform(click());
+        onView(withId(R.id.output)).check(matches(withText("-1+")));
+
     }
 }
 
